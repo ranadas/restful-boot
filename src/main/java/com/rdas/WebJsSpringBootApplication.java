@@ -1,0 +1,16 @@
+package com.rdas;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * Created by rdas on 29/07/2016.
+ */
+@Slf4j
+@SpringBootApplication
+public class WebJsSpringBootApplication {
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(WebJsSpringBootApplication.class, args);
+    }
+}
