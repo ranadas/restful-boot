@@ -1,5 +1,7 @@
 package com.rdas.spocktut
 
+import org.apache.commons.lang3.StringUtils
+import spock.lang.IgnoreIf
 import spock.lang.Narrative
 import spock.lang.Specification
 import spock.lang.Title
@@ -13,6 +15,12 @@ import spock.lang.Unroll
 As a Developer using Spock Framework for testing,
 ''')
 class ListTest extends Specification {
+
+    private static boolean isOsWindows() {
+        def osName = System.properties['os.name']
+        println " checking if osName is windows [$osName]"
+        return StringUtils.containsIgnoreCase(osName, "wind")
+    }
 
     def "should not be empty after adding element"() {
         given:
@@ -37,5 +45,26 @@ class ListTest extends Specification {
         a | b | c // these are vars will be available above in test,
         5 | 1 | 5 // initialized to these values!
         9 | 9 | 9
+    }
+
+    @IgnoreIf({ ListTest.isOsWindows() })
+    def "run only if run on non-windows operating system"() {
+        expect:
+        true
+        println "running test in non win"
+    }
+
+    @IgnoreIf({ javaVersion < 1.7 })
+    def "run spec if run in Java 1.7 or higher"() {
+        expect:
+        true
+        println "running test 1 "
+    }
+
+    @IgnoreIf({ javaVersion != 1.7 })
+    def "run spec if run in Java 1.7"() {
+        expect:
+        true
+        println "running test "
     }
 }

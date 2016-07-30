@@ -60,4 +60,6 @@ dependencies {
 //    testCompile('com.athaydes:spock-reports:1.2.12') {
 //        transitive = false
 //    }
+    compile "org.apache.commons:commons-lang3:3.4"
+
 }
