@@ -63,7 +63,7 @@ class ListTest extends Specification implements UserSpecTrait {
     def "run spec if run in Java 1.7 or higher"() {
         expect:
         true
-        println "running test when javaVersion is GT 1.7 "
+        println "running test when javaVersion is GT 1.7 with user from trait $user"
     }
 
     @IgnoreIf({ javaVersion != 1.7 })
