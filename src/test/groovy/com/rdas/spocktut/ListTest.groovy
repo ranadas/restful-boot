@@ -14,12 +14,17 @@ import spock.lang.Unroll
 @Narrative('''
 As a Developer using Spock Framework for testing,
 ''')
-class ListTest extends Specification {
+class ListTest extends Specification implements UserSpecTrait {
 
     private static boolean isOsWindows() {
         def osName = System.properties['os.name']
         println " checking if osName is windows [$osName]"
         return StringUtils.containsIgnoreCase(osName, "wind")
+    }
+
+    // this is called after junit setup ( setup from trait)
+    def setup() {
+        println "\t------------>>> Specification SETUP"
     }
 
     def "should not be empty after adding element"() {
@@ -51,14 +56,14 @@ class ListTest extends Specification {
     def "run only if run on non-windows operating system"() {
         expect:
         true
-        println "running test in non win"
+        println "running test in non win os"
     }
 
     @IgnoreIf({ javaVersion < 1.7 })
     def "run spec if run in Java 1.7 or higher"() {
         expect:
         true
-        println "running test 1 "
+        println "running test when javaVersion is GT 1.7 "
     }
 
     @IgnoreIf({ javaVersion != 1.7 })
