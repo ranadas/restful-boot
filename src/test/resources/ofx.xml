@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?OFX OFXHEADER="200" VERSION="202" SECURITY="NONE" OLDFILEUID="NONE" NEWFILEUID="NONE"?><OFX>
+    <SIGNONMSGSRSV1>
+        <SONRS>
+            <STATUS>
+                <CODE>0</CODE>
+                <SEVERITY>INFO</SEVERITY>
+                <MESSAGE>SUCCESS</MESSAGE>
+            </STATUS>
+            <DTSERVER>20160505095120.429[-6:MDT]</DTSERVER>
+            <LANGUAGE>ENG</LANGUAGE>
+        </SONRS>
+    </SIGNONMSGSRSV1>
+    <TAX1099MSGSRSV1>
+        <TAX1099TRNRS>
+            <TRNUID>97f78a87-babc-424e-9750-22957724917f</TRNUID>
+            <STATUS>
+                <CODE>0</CODE>
+                <SEVERITY>INFO</SEVERITY>
+                <MESSAGE>SUCCESS</MESSAGE>
+            </STATUS>
+            <TAX1099RS>
+                <RECID>071384344</RECID>
+                <TAX1099B_V100>
+                    <SRVRTID>37345</SRVRTID>
+                    <TAXYEAR>2015</TAXYEAR>
+                    <EXTDBINFO_V100>
+
+                        <PROCDET_V100>
+                            <FORM8949CODE>A</FORM8949CODE>
+                            <DTVAR>Y</DTVAR>
+                            <DTSALE>20151120[-7:MST]</DTSALE>
+                            <SECNAME>OPPENHEIMER RISING DIVIDENDS FUN</SECNAME>
+                            <SALEDESCRIPTION>132 SHARES OF FUND</SALEDESCRIPTION>
+                            <NUMSHRS>132</NUMSHRS>
+                            <COSTBASIS>2188.47</COSTBASIS>
+                            <SALESPR>2650.45</SALESPR>
+                            <LONGSHORT>SHORT</LONGSHORT>
+                            <FEDTAXWH>0</FEDTAXWH>
+                            <ADJUSTMENTAMT>0</ADJUSTMENTAMT>
+                            <LOSSNOTALLOWED>N</LOSSNOTALLOWED>
+                        </PROCDET_V100>
+
+                        <PROCDET_V100>
+                            <FORM8949CODE>D</FORM8949CODE>
+                            <DTVAR>Y</DTVAR>
+                            <DTSALE>20151120[-7:MST]</DTSALE>
+                            <SECNAME>OPPENHEIMER RISING DIVIDENDS FUN</SECNAME>
+                            <SALEDESCRIPTION>1,384 SHARES OF FUND</SALEDESCRIPTION>
+                            <NUMSHRS>1384</NUMSHRS>
+                            <COSTBASIS>22997.78</COSTBASIS>
+                            <SALESPR>27852.56</SALESPR>
+                            <LONGSHORT>LONG</LONGSHORT>
+                            <FEDTAXWH>0</FEDTAXWH>
+                            <ADJUSTMENTAMT>0</ADJUSTMENTAMT>
+                            <LOSSNOTALLOWED>N</LOSSNOTALLOWED>
+                        </PROCDET_V100>
+
+                    </EXTDBINFO_V100>
+                    <PAYERADDR>
+                        <PAYERNAME1>OPPENHEIMER RISING DIVIDENDS FUN</PAYERNAME1>
+                        <PAYERNAME2>C/O OPPENHEIMERFUNDS SERVICES</PAYERNAME2>
+                        <ADDR1>P.O. BOX 5270</ADDR1>
+                        <CITY>DENVER</CITY>
+                        <STATE>CO</STATE>
+                        <POSTALCODE>802175270</POSTALCODE>
+                        <PHONE>8005257048</PHONE>
+                    </PAYERADDR>
+                    <PAYERID>133035629</PAYERID>
+                    <RECADDR>
+                        <RECNAME1>ROITMAN   JER L</RECNAME1>
+                        <ADDR1>591 HILLTOP DR APT 33</ADDR1>
+                        <CITY>REDDING</CITY>
+                        <STATE>CA</STATE>
+                        <POSTALCODE>960034837</POSTALCODE>
+                    </RECADDR>
+                    <RECID>071384344</RECID>
+                    <RECACCT>002252253651098</RECACCT>
+                </TAX1099B_V100>
+
+                <TAX1099B_V100>
+                    <SRVRTID>233</SRVRTID>
+                    <TAXYEAR>2015</TAXYEAR>
+                    <EXTDBINFO_V100>
+                        <PROCDET_V100>
+                            <FORM8949CODE>E</FORM8949CODE>
+                            <DTVAR>Y</DTVAR>
+                            <DTSALE>20151120[-7:MST]</DTSALE>
+                            <SECNAME>OPPENHEIMER INTL DIVERSIFIED FUN</SECNAME>
+                            <SALEDESCRIPTION>1,525 SHARES OF FUND</SALEDESCRIPTION>
+                            <NUMSHRS>1525</NUMSHRS>
+                            <COSTBASIS>16833.6</COSTBASIS>
+                            <SALESPR>21695.17</SALESPR>
+                            <LONGSHORT>LONG</LONGSHORT>
+                            <FEDTAXWH>0</FEDTAXWH>
+                            <ADJUSTMENTAMT>0</ADJUSTMENTAMT>
+                            <NONCOVEREDSECURITY>Y</NONCOVEREDSECURITY>
+                            <LOSSNOTALLOWED>N</LOSSNOTALLOWED>
+                            <BASISNOTSHOWN>Y</BASISNOTSHOWN>
+                        </PROCDET_V100>
+                    </EXTDBINFO_V100>
+                    <PAYERADDR>
+                        <PAYERNAME1>OPPENHEIMER INTL DIVERSIFIED FUN</PAYERNAME1>
+                        <PAYERNAME2>C/O OPPENHEIMERFUNDS SERVICES</PAYERNAME2>
+                        <ADDR1>P.O. BOX 5270</ADDR1>
+                        <CITY>DENVER</CITY>
+                        <STATE>CO</STATE>
+                        <POSTALCODE>802175270</POSTALCODE>
+                        <PHONE>8005257048</PHONE>
+                    </PAYERADDR>
+                    <PAYERID>710986094</PAYERID>
+                    <RECADDR>
+                        <RECNAME1>ROITMAN   JER L</RECNAME1>
+                        <ADDR1>591 HILLTOP DR APT 33</ADDR1>
+                        <CITY>REDDING</CITY>
+                        <STATE>CA</STATE>
+                        <POSTALCODE>960034837</POSTALCODE>
+                    </RECADDR>
+                    <RECID>071384344</RECID>
+                    <RECACCT>001951950207845</RECACCT>
+                </TAX1099B_V100>
+            </TAX1099RS>
+        </TAX1099TRNRS>
+    </TAX1099MSGSRSV1>
+</OFX>
