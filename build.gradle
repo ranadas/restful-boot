@@ -58,6 +58,8 @@ dependencies {
 
     compile "org.apache.commons:commons-lang$commons_lang_ver"
 
+    compile 'org.springframework.boot:spring-boot-starter-security'
+
 }
 
 

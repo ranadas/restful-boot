@@ -25,6 +25,8 @@ class Person {
 
     String firstName
     String lastName
+    String username
+    String password
 
     @Embedded
     Address address
