@@ -32,9 +32,9 @@ dependencies {
     }
 
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile "org.projectlombok:lombok:1.16.10"
+    compile "org.projectlombok:lombok:$lombok_ver"
     compile "org.hibernate:hibernate-validator"
-    compile "com.google.guava:guava:19.0"
+    compile "com.google.guava:guava:$guava_ver"
 
     //compile "org.apache.tomcat.embed:tomcat-embed-jasper:9.0.0.M8"
     compile "org.hsqldb:hsqldb"
@@ -44,22 +44,51 @@ dependencies {
     testCompile "org.springframework.boot:spring-boot-starter-test"
     testCompile "org.easytesting:fest-assert-core:2.0M10"
 
+//    compile "org.eclipse.jetty:apache-jstl:9.4.0.M0"
 
-    compile "org.eclipse.jetty:apache-jstl:9.4.0.M0"
-
-    compile ("io.springfox:springfox-swagger-ui:2.2.2") {
+    compile("io.springfox:springfox-swagger-ui:$swagger_ver") {
         exclude module: 'org.slf4j:slf4j-api'
         exclude module: 'com.google.guava:guava'
     }
-    compile ("io.springfox:springfox-swagger2:2.2.2") {
+    compile("io.springfox:springfox-swagger2:$swagger_ver") {
         exclude module: 'org.slf4j:slf4j-api'
         exclude module: 'com.google.guava:guava'
     }
     compile "org.springframework.boot:spring-boot-devtools"
 
-//    testCompile('com.athaydes:spock-reports:1.2.12') {
-//        transitive = false
-//    }
-    compile "org.apache.commons:commons-lang3:3.4"
+    compile "org.apache.commons:commons-lang$commons_lang_ver"
 
+}
+
+
+test {
+
+    loadConfigurations()
+    println 'configurations from environment: ' + config.toString()
+
+    systemProperty "foo", "barValurFromGradle2"
+    systemProperty "host", config.host
+    systemProperty "port", config.port
+    systemProperty "user", config.user
+    systemProperty "password", config.password
+
+    // following to display logs in console
+    testLogging.showStandardStreams = true
+
+    testLogging {
+        events 'started', 'passed'
+    }
+}
+
+loadConfigurations()
+
+def loadConfigurations() {
+    def environment = hasProperty('env') ? env : 'dev'
+
+    project.ext.envrionment = environment
+    println "Environment is set to $environment"
+
+    def configFile = file('environment.groovy')
+    def config = new ConfigSlurper("$environment").parse(configFile.toURL())
+    project.ext.config = config
 }

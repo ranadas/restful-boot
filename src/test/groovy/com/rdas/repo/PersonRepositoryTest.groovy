@@ -23,6 +23,8 @@ public class PersonRepositoryTest {
 
     @Before
     public void setup() {
+        println "\n-->> sys prop foo set to [" + System.getProperty("foo") + "]-"
+        println "\n-->> sys prop host set to [" + System.getProperty("host") + "]-"
     }
 
     @Test
@@ -33,7 +35,7 @@ public class PersonRepositoryTest {
     @Test
     public void assertThreePersonsByFindAll() {
         assertThat(personRepository.count()).isEqualTo(3)
-        personRepository.findAll().each { it->
+        personRepository.findAll().each { it ->
             println it
         }
     }

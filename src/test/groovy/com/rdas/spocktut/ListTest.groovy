@@ -1,5 +1,6 @@
 package com.rdas.spocktut
 
+import com.rdas.spring.model.User
 import org.apache.commons.lang3.StringUtils
 import spock.lang.IgnoreIf
 import spock.lang.Narrative
@@ -22,7 +23,7 @@ class ListTest extends Specification implements UserSpecTrait {
         return StringUtils.containsIgnoreCase(osName, "wind")
     }
 
-    // this is called after junit setup ( setup from trait)
+// this is called after junit setup ( setup from trait)
     def setup() {
         println "\t------------>>> Specification SETUP"
     }

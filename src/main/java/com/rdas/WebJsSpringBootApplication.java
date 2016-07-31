@@ -8,7 +8,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * Created by rdas on 29/07/2016.
  */
-@EnableSwagger2
+//@EnableSwagger2 //TODO: enabling this, test fails.
 @Slf4j
 @SpringBootApplication
 public class WebJsSpringBootApplication {
