@@ -58,4 +58,12 @@ public class PersonRepositoryTest {
         assertThat(person).isNotNull()
         println person
     }
+
+
+    @Test
+    public void findPersonByUsername() {
+        def person = personRepository.findByUsername("adent")
+        assertThat(person).isNotNull()
+        println person
+    }
 }

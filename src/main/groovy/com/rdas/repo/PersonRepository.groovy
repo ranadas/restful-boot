@@ -12,4 +12,6 @@ public interface PersonRepository extends JpaRepository<Person, String> {
     List<Person> findByLastName(String lastName)
 
     List<Person> findByAddressPlanet(String planet)
+
+    Person findByUsername(String username)
 }

@@ -22,9 +22,9 @@ class PersonRepoStartup {
     void init() {
         repository.deleteAll();
 
-        Person arthur = new Person(id: 1, firstName: 'Arthur', lastName: 'Dent', address: new Address(planet: 'Earth'))
-        Person trillian = new Person(id: 2, firstName: 'Trillian', lastName: 'McMillan', address: new Address(planet: 'Earth'))
-        Person ford = new Person(id: 3, firstName: 'Ford', lastName: 'Prefect', address: new Address(planet: 'Betelgeuse 5'))
+        Person arthur = new Person(id: 1, firstName: 'Arthur', lastName: 'Dent', username: 'adent', password: 'adent', address: new Address(planet: 'Earth'))
+        Person trillian = new Person(id: 2, firstName: 'Trillian', lastName: 'McMillan', username: 'tmcmillan', password: 'tmcmillan', address: new Address(planet: 'Earth'))
+        Person ford = new Person(id: 3, firstName: 'Ford', lastName: 'Prefect', username: 'fprefect', password: 'fprefect', address: new Address(planet: 'Betelgeuse 5'))
         repository.save(arthur)
         repository.save(trillian)
         repository.save(ford)
