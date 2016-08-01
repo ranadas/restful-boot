@@ -13,5 +13,5 @@ public interface PersonRepository extends JpaRepository<Person, String> {
 
     List<Person> findByAddressPlanet(String planet)
 
-    Person findByUsername(String username)
+    Optional<Person> findByUsername(String username)
 }

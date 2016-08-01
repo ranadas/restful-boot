@@ -63,7 +63,7 @@ public class PersonRepositoryTest {
     @Test
     public void findPersonByUsername() {
         def person = personRepository.findByUsername("adent")
-        assertThat(person).isNotNull()
+        assertThat(person.isPresent()).isTrue()
         println person
     }
 }
