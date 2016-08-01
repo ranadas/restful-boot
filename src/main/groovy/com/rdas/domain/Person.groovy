@@ -12,13 +12,14 @@ import javax.persistence.Id
 
 /**
  * Created by rdas on 30/07/2016.
+ * TODO : excludes is not working yet!!
  */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString(includeNames = true)
+@ToString(includeNames = true, excludes="username,password")
 class Person {
     @Id
     String id
