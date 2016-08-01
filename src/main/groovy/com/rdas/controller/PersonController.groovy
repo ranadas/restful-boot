@@ -4,6 +4,7 @@ import com.rdas.domain.Person
 import com.rdas.repo.PersonRepository
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.*
 
 /**
@@ -28,10 +29,10 @@ class PersonController {
     /**
      * curl localhost:8080/persons
      */
-    //@PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("hasRole('ROLE_USER')")
     @RequestMapping(method = RequestMethod.GET)
     List<Person> getAllPersons() {
-        log.info("getAllPersons()")
+        log.debug("geting all Persons()")
         repository.findAll()
     }
 
