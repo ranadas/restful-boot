@@ -21,6 +21,9 @@ public class PersonRepositoryTest {
     @Autowired
     private PersonRepository personRepository
 
+    @Autowired
+    private GenericSqlDomainRepository sqlDomainRepository
+
     @Before
     public void setup() {
         println "\n-->> sys prop foo set to [" + System.getProperty("foo") + "]-"
@@ -65,5 +68,12 @@ public class PersonRepositoryTest {
         def person = personRepository.findByUsername("adent")
         assertThat(person.isPresent()).isTrue()
         println person
+    }
+
+    @Test
+    public void findPersonBySql() {
+        //adent
+        def persons = sqlDomainRepository.getAdvancedPersons("adent")
+        assertThat(persons).isNotNull()
     }
 }
