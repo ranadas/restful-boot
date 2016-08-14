@@ -45,9 +45,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(personDetailService)
-                //TODO passwordEncoder(passwordEncoder())
-
-
+        //TODO passwordEncoder(passwordEncoder())
 
 //        auth.inMemoryAuthentication()
 //                .withUser("user").password("password").roles("USER").and()
@@ -58,7 +56,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     //https://www.javacodegeeks.com/2016/05/spring-boot-database-initialization.html
     //http://shout.setfive.com/2015/11/02/spring-boot-authentication-with-custom-http-header/
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         //ShaPasswordEncoder encoder = new ShaPasswordEncoder();
         PasswordEncoder encoder = new BCryptPasswordEncoder();
         return encoder;

@@ -19,7 +19,7 @@ import javax.persistence.Id
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString(includeNames = true, excludes="username,password")
+@ToString(includeNames = true, excludes = "username,password")
 class Person {
     @Id
     String id

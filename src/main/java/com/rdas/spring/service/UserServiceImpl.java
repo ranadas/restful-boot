@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         log.debug("Creating {}", user);
         User existing = repository.findOne(user.getId());
         if (existing != null) {
-            throw new UserAlreadyExistsException(String.format("There already exists a user with id=%s", user   .getId()));
+            throw new UserAlreadyExistsException(String.format("There already exists a user with id=%s", user.getId()));
         }
         return repository.save(user);
     }

@@ -19,7 +19,6 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * Created by rdas on 23/07/2016.
- *
  */
 //@RunWith(MockitoJUnitRunner.class)
 //@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -31,7 +30,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 public class UserRestControllerTest {
 
     @Autowired
-    private UserRestController  userRestController;
+    private UserRestController userRestController;
 
     @Before
     public void setup() {

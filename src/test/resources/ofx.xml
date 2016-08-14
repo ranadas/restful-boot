@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?OFX OFXHEADER="200" VERSION="202" SECURITY="NONE" OLDFILEUID="NONE" NEWFILEUID="NONE"?><OFX>
+<?OFX OFXHEADER="200" VERSION="202" SECURITY="NONE" OLDFILEUID="NONE" NEWFILEUID="NONE"?>
+<OFX>
     <SIGNONMSGSRSV1>
         <SONRS>
             <STATUS>
@@ -68,7 +69,7 @@
                     </PAYERADDR>
                     <PAYERID>133035629</PAYERID>
                     <RECADDR>
-                        <RECNAME1>ROITMAN   JER L</RECNAME1>
+                        <RECNAME1>ROITMAN JER L</RECNAME1>
                         <ADDR1>591 HILLTOP DR APT 33</ADDR1>
                         <CITY>REDDING</CITY>
                         <STATE>CA</STATE>
@@ -110,7 +111,7 @@
                     </PAYERADDR>
                     <PAYERID>710986094</PAYERID>
                     <RECADDR>
-                        <RECNAME1>ROITMAN   JER L</RECNAME1>
+                        <RECNAME1>ROITMAN JER L</RECNAME1>
                         <ADDR1>591 HILLTOP DR APT 33</ADDR1>
                         <CITY>REDDING</CITY>
                         <STATE>CA</STATE>

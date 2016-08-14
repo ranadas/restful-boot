@@ -8,7 +8,8 @@ import javax.validation.constraints.Size;
 /**
  * Created by rdas on 23/07/2016.
  */
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
