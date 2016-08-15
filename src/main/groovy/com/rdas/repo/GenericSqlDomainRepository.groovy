@@ -19,19 +19,17 @@ public class GenericSqlDomainRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate
 
+    private static final String sql = "SELECT * FROM Person WHERE username = ?"
     @PostConstruct
     public void init() {
         assert jdbcTemplate != null
     }
 
     def getAdvancedPersons(username) {
-        String sql = "SELECT * FROM Person WHERE username = ?";
-
-        Person person = (Person) jdbcTemplate.queryForObject(sql, new PersonRowMapper(), username);
+        Person person = (Person) jdbcTemplate.queryForObject(sql, new PersonRowMapper(), username)
 
         // Method 2 very easy
         //  Employee employee = (Employee) jdbcTemplate.queryForObject(sql, new Object[] { id }, new BeanPropertyRowMapper(Employee.class));
-
-        return person;
+        return person
     }
 }

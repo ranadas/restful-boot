@@ -2,6 +2,7 @@ package com.rdas.repo
 
 import com.rdas.WebJsSpringBootApplication
 import com.rdas.domain.Person
+import com.rdas.spring.repository.SqlRepository
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -23,6 +24,9 @@ public class PersonRepositoryTest {
 
     @Autowired
     private GenericSqlDomainRepository sqlDomainRepository
+
+    @Autowired
+    private SqlRepository sqlRepository;
 
     @Before
     public void setup() {
@@ -74,6 +78,13 @@ public class PersonRepositoryTest {
     public void findPersonBySql() {
         //adent
         def persons = sqlDomainRepository.getAdvancedPersons("adent")
+        assertThat(persons).isNotNull()
+    }
+
+    @Test
+    public void findPersonUsername() {
+        //adent
+        def persons = sqlRepository.getPersonForUSername("adent")
         assertThat(persons).isNotNull()
     }
 }
